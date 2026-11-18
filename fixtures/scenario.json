@@ -1,0 +1,24 @@
+{
+  "entry_path": "/stream?from=s1",
+  "media": "application/json-seq",
+  "routes": [
+    {
+      "path": "/stream?from=s1",
+      "method": "GET",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json-seq"
+      },
+      "body": "\u001e{\"kind\":\"begin\",\"segment\":\"s1\"}\n\u001e{\"kind\":\"event\",\"segment\":\"s1\",\"seq\":0,\"id\":\"arrival-1\",\"hall\":\"east\"}\n"
+    },
+    {
+      "path": "/stream-complete?from=s1",
+      "method": "GET",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json-seq"
+      },
+      "body": "\u001e{\"kind\":\"begin\",\"segment\":\"s1\"}\n\u001e{\"kind\":\"event\",\"segment\":\"s1\",\"seq\":0,\"id\":\"arrival-1\",\"hall\":\"east\"}\n\u001e{\"kind\": \"end\", \"segment\": \"s1\", \"count\": 1, \"sha256\": \"15f6c7577b14df91c5e802ee7a60f24f09d465d180f67c62aa4cc70baf837f07\", \"next\": \"s2\"}\n"
+    }
+  ]
+}
